@@ -1,6 +1,6 @@
 function traerInformacionCategorias() {
     $.ajax({
-        url: "http://localhost:8080/api/Category/all",
+        url: "http://150.230.35.140:8080/api/Category/all",
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
@@ -73,7 +73,7 @@ function actualizarInformacionCategorias(idElemento) {
     console.log(myData);
     let dataToSend = JSON.stringify(myData);
     $.ajax({
-        url: "http://150.230.85.250:8080/api/Category/update",
+        url: "http://150.230.35.140:8080/api/Category/update",
         type: "PUT",
         data: dataToSend,
         contentType: "application/JSON",

@@ -2,7 +2,7 @@ function autoTraeCategoria(){
     
     console.log("se esta ejecutando")
     $.ajax({
-        url:"http://localhost:8080/api/Category/all",
+        url:"http://150.230.35.140:8080/api/Category/all",
         type:"GET",
         dataType:"JSON",
         success:function(respuesta){
@@ -19,7 +19,7 @@ function autoTraeCategoria(){
 //Manejador GET
 function traerInformacionCubiculos() {
     $.ajax({
-        url:"http://localhost:8080/api/Lib/all",
+        url:"http://150.230.35.140:8080/api/Lib/all",
         type: "GET",
         datatype: "JSON",
         success: function (response) {
@@ -54,7 +54,7 @@ function pintarRespuestaCubiculos(response){
 function cargarDatosCubiculos(id) {
     $.ajax({
         dataType: 'json',
-        url:"http://localhost:8080/api/Lib/"+id,
+        url:"http://150.230.35.140:8080/api/Lib/"+id,
         //url: "http://localhost:8080/api/Skate/" + id,
         type: 'GET',
 
@@ -96,7 +96,7 @@ function agregarCubiculos() {
             $.ajax({
                 type: "POST",
                 contentType: "application/json",
-                url:"http://localhost:8080/api/Cubiculos/save",
+                url:"http://150.230.35.140:8080/api/Cubiculos/save",
                 data: dataToSend,
                 datatype: 'json',
 
@@ -133,7 +133,7 @@ console.log(dataToSend);
         {
             dataType: 'json',
             data: dataToSend,
-            url:"http://localhost:8080/api/Lib/"+idElemento,
+            url:"http://150.230.35.140:8080/api/Lib/"+idElemento,
             type: 'DELETE',
             contentType: "application/JSON",
             success: function (response) {
@@ -171,7 +171,7 @@ function actualizar(idElemento) {
             datatype: 'json',
             data: dataToSend,
             contentType: "application/JSON",
-            url:"http://localhost:8080/api/Lib/update",
+            url:"http://150.230.35.140:8080/api/Lib/update",
             //url: "http://localhost:8080/api/Skate/update",
             type: "PUT",
 
