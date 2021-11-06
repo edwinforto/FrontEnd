@@ -79,7 +79,7 @@ function actualizarInformacionCategorias(idElemento) {
         contentType: "application/JSON",
         datatype: "JSON",
         success: function (respuesta) {
-            $("#resultado").empty();
+            $("#resultado1").empty();
             $("#id").val("");
             $("#Cname").val("");
             $("#Cdescription").val("");
@@ -104,7 +104,7 @@ function borrarCategoria(idElemento) {
         contentType: "application/JSON",
         datatype: "JSON",
         success: function (respuesta) {
-            $("#resultado").empty();
+            $("#resultado1").empty();
             traerInformacionCategorias();
             alert("Se ha Eliminado.")
         }

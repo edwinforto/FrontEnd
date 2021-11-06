@@ -139,7 +139,7 @@ function borrarReservation(idElemento) {
             success: function (response) {
                 console.log(response);
                 $("#miListaReservation").empty();
-
+                listarReservation();
                 alert("se ha Eliminado Correctamente!")
             },
 
@@ -201,11 +201,11 @@ function actualizarReservation(idElemento) {
             success: function (response) {
                 console.log(response);
                 $("#miListaReservation").empty();
+                listarReservation();
                 alert("se ha Actualizado Correctamente!")
 
                 //Limpiar Campos
-                $("#resultado5").empty();
-
+                $("#miListaReservation").empty();
                 $("#startDate").val("");
                 $("#devolutionDate").val("");
                 $("#status").val("");

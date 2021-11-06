@@ -139,7 +139,7 @@ console.log(dataToSend);
             success: function (response) {
                 console.log(response);
                 $("#miListaCubiculos").empty();
-
+                traerInformacionCubiculos();
                 alert("se ha Eliminado Correctamente!")
             },
 
@@ -178,7 +178,7 @@ function actualizar(idElemento) {
             success: function (response) {
                 console.log(response);
                 $("#miListaCubiculos").empty();
-                listarCubiculos();
+                traerInformacionCubiculos()
                 alert("se ha Actualizado Correctamente!")
 
                 //Limpiar Campos

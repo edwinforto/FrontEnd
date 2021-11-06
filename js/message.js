@@ -93,7 +93,7 @@ function guardarInformacionMessage(){
         dataType: 'JSON',
         data: JSON.stringify(var2),
         
-        url:"http://150.230.35.140:8080/api/Message/save",
+        url:"http://localhost:8080/api/Message/save",
        
         
         success:function(response) {
@@ -134,7 +134,7 @@ function actualizarInformacionMessage(idElemento){
         contentType:"application/JSON",
         datatype:"JSON",
         success:function(respuesta){
-            $("#resultado").empty();
+            $("#resultadoMensajes").empty();
             $("#messagetext").val("");
            
             autoInicioMensajes();
@@ -157,7 +157,7 @@ function borrarMessage(idElemento){
         contentType:"application/JSON",
         datatype:"JSON",
         success:function(respuesta){
-            $("#resultado").empty();
+            $("#resultadoMensajes").empty();
             autoInicioMensajes();
             alert("Se ha Eliminado.")
         }
