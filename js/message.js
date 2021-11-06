@@ -93,7 +93,7 @@ function guardarInformacionMessage(){
         dataType: 'JSON',
         data: JSON.stringify(var2),
         
-        url:"http://localhost:8080/api/Message/save",
+        url:"http://150.230.35.140:8080/api/Message/save",
        
         
         success:function(response) {

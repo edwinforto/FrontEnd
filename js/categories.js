@@ -42,7 +42,7 @@ function guardarInformacionCategorias() {
         dataType: 'JSON',
         data: JSON.stringify(var2),
 
-        url: "http://150.230.85.250:8080/api/Category/save",
+        url: "http://150.230.35.140:8080/api/Category/save",
 
 
         success: function (response) {
@@ -98,7 +98,7 @@ function borrarCategoria(idElemento) {
     };
     let dataToSend = JSON.stringify(myData);
     $.ajax({
-        url: "http://150.230.85.250:8080/api/Category/" + idElemento,
+        url: "http://150.230.35.140:8080/api/Category/" + idElemento,
         type: "DELETE",
         data: dataToSend,
         contentType: "application/JSON",
