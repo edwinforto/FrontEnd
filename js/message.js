@@ -1,7 +1,9 @@
+//const URL = "http://150.230.35.140:8080/api/";
+const URL = "http://localhost:8080/api/";
 function autoInicioRelacionCliente(){
     
     $.ajax({
-        url:"http://150.230.35.140:8080/api/Client/all",
+        url:URL + "Client/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -18,7 +20,7 @@ function autoInicioRelacionCliente(){
 function autoInicioCubiculos(){
 
     $.ajax({
-        url:"http://150.230.35.140:8080/api/Lib/all",
+        url:URL + "Lib/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -37,7 +39,7 @@ function autoInicioCubiculos(){
 function autoInicioMensajes(){
     console.log("se esta ejecutando")
     $.ajax({
-        url:"http://150.230.35.140:8080/api/Message/all",
+        url:URL + "Message/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -93,11 +95,11 @@ function guardarInformacionMessage(){
         dataType: 'JSON',
         data: JSON.stringify(var2),
         
-        url:"http://localhost:8080/api/Message/save",
+        url:URL + "Message/save",
        
         
         success:function(response) {
-                console.log(response);
+            console.log(response);
             console.log("Se guardo correctamente");
             alert("Se guardo correctamente");
             window.location.reload()
@@ -128,7 +130,7 @@ function actualizarInformacionMessage(idElemento){
     console.log(myData);
     let dataToSend=JSON.stringify(myData);
     $.ajax({
-        url:"http://150.230.35.140:8080/api/Message/update",
+        url:URL + "Message/update",
         type:"PUT",
         data:dataToSend,
         contentType:"application/JSON",
@@ -151,7 +153,7 @@ function borrarMessage(idElemento){
     let dataToSend=JSON.stringify(myData);
     console.log(dataToSend);
     $.ajax({
-        url:"http://150.230.35.140:8080/api/Message/"+idElemento,
+        url:URL + "Message/"+idElemento,
         type:"DELETE",
         data:dataToSend,
         contentType:"application/JSON",

@@ -1,6 +1,9 @@
+//const URL = "http://150.230.35.140:8080/api/";
+const URL = "http://localhost:8080/api/";
+
 function traerInformacionCategorias() {
     $.ajax({
-        url: "http://150.230.35.140:8080/api/Category/all",
+        url: URL + "Category/all",
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
@@ -42,7 +45,7 @@ function guardarInformacionCategorias() {
         dataType: 'JSON',
         data: JSON.stringify(var2),
 
-        url: "http://150.230.35.140:8080/api/Category/save",
+        url: URL + "api/Category/save",
 
 
         success: function (response) {
@@ -73,7 +76,7 @@ function actualizarInformacionCategorias(idElemento) {
     console.log(myData);
     let dataToSend = JSON.stringify(myData);
     $.ajax({
-        url: "http://150.230.35.140:8080/api/Category/update",
+        url: URL + "Category/update",
         type: "PUT",
         data: dataToSend,
         contentType: "application/JSON",
@@ -98,7 +101,7 @@ function borrarCategoria(idElemento) {
     };
     let dataToSend = JSON.stringify(myData);
     $.ajax({
-        url: "http://150.230.35.140:8080/api/Category/" + idElemento,
+        url: URL + "Category/" + idElemento,
         type: "DELETE",
         data: dataToSend,
         contentType: "application/JSON",

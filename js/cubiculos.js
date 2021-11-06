@@ -1,8 +1,11 @@
+//const URL = "http://150.230.35.140:8080/api/";
+const URL = "http://localhost:8080/api/";
+
 function autoTraeCategoria(){
     
     console.log("se esta ejecutando")
     $.ajax({
-        url:"http://150.230.35.140:8080/api/Category/all",
+        url:URL + "Category/all",
         type:"GET",
         dataType:"JSON",
         success:function(respuesta){
@@ -19,7 +22,7 @@ function autoTraeCategoria(){
 //Manejador GET
 function traerInformacionCubiculos() {
     $.ajax({
-        url:"http://150.230.35.140:8080/api/Lib/all",
+        url:URL + "Lib/all",
         type: "GET",
         datatype: "JSON",
         success: function (response) {
@@ -54,7 +57,7 @@ function pintarRespuestaCubiculos(response){
 function cargarDatosCubiculos(id) {
     $.ajax({
         dataType: 'json',
-        url:"http://150.230.35.140:8080/api/Lib/"+id,
+        url:URL + "Lib/"+id,
         //url: "http://localhost:8080/api/Skate/" + id,
         type: 'GET',
 
@@ -96,7 +99,7 @@ function agregarCubiculos() {
             $.ajax({
                 type: "POST",
                 contentType: "application/json",
-                url:"http://150.230.35.140:8080/api/Cubiculos/save",
+                url:URL + "Lib/save",
                 data: dataToSend,
                 datatype: 'json',
 
@@ -128,12 +131,12 @@ function borrar(idElemento) {
     }
 
     var dataToSend = JSON.stringify(elemento);
-console.log(dataToSend);
+    console.log(dataToSend);
     $.ajax(
         {
             dataType: 'json',
             data: dataToSend,
-            url:"http://150.230.35.140:8080/api/Lib/"+idElemento,
+            url:URL + "Lib/"+idElemento,
             type: 'DELETE',
             contentType: "application/JSON",
             success: function (response) {
@@ -171,8 +174,7 @@ function actualizar(idElemento) {
             datatype: 'json',
             data: dataToSend,
             contentType: "application/JSON",
-            url:"http://150.230.35.140:8080/api/Lib/update",
-            //url: "http://localhost:8080/api/Skate/update",
+            url:URL + "Lib/update",
             type: "PUT",
 
             success: function (response) {

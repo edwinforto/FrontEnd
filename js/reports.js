@@ -1,7 +1,9 @@
+//const URL = "http://150.230.35.140:8080/api/";
+const URL = "http://localhost:8080/api/";
 function traerReporteStatus(){
     console.log("test");
     $.ajax({
-        url:"http://150.230.35.140:8080/api/Reservation/report-status",
+        url:URL + "Reservation/report-status",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -30,7 +32,7 @@ function traerReporteDate(){
     console.log(fechaCierre);
     
         $.ajax({
-            url:"http://150.230.35.140:8080/api/Reservation/report-dates/"+fechaInicio+"/"+fechaCierre,
+            url:URL + "api/Reservation/report-dates/"+fechaInicio+"/"+fechaCierre,
             type:"GET",
             datatype:"JSON",
             success:function(respuesta){
@@ -59,7 +61,7 @@ function traerReporteDate(){
 
     function traerReporteClientes(){
         $.ajax({
-            url:"http://150.230.35.140:8080/api/Reservation/report-clients",
+            url:URL + "Reservation/report-clients",
             type:"GET",
             datatype:"JSON",
             success:function(respuesta){

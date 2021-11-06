@@ -1,6 +1,9 @@
+//const URL = "http://150.230.35.140:8080/api/";
+const URL = "http://localhost:8080/api/";
+
 function traerInformacionClientes(){
     $.ajax({
-        url:"http://150.230.35.140:8080/api/Client/all",
+        url:URL + "Client/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -42,7 +45,7 @@ function guardarInformacionClientes(){
         dataType: 'JSON',
         data: JSON.stringify(var2),
         
-        url:"http://150.230.35.140:8080/api/Client/save",
+        url:URL + "Client/save",
        
         
         success:function(response) {
@@ -75,7 +78,7 @@ function actualizarInformacionClientes(idElemento){
     console.log(myData);
     let dataToSend=JSON.stringify(myData);
     $.ajax({
-        url:"http://150.230.35.140:8080/api/Client/update",
+        url:URL + "Client/update",
         type:"PUT",
         data:dataToSend,
         contentType:"application/JSON",
@@ -102,7 +105,7 @@ function borrarClientes(idElemento){
     };
     let dataToSend=JSON.stringify(myData);
     $.ajax({
-        url:"http://150.230.35.140:8080/api/Client/" + idElemento,
+        url:URL + "Client/" + idElemento,
         type:"DELETE",
         data:dataToSend,
         contentType:"application/JSON",
