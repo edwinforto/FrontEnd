@@ -1,5 +1,5 @@
-//const URL = "http://150.230.35.140:8080/api/";
-const URL = "http://localhost:8080/api/";
+const URL = "http://150.230.35.140:8080/api/";
+//const URL = "http://localhost:8080/api/";
 function autoInicioRelacionCliente(){
     
     $.ajax({
